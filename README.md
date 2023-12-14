@@ -4,7 +4,9 @@ ECE 535 Project
 
 TartanVO is a learning-based visual odometry trained on TartanAir dataset. It generalizes to multiple datasets and real-world scenarios, and outperforms geometry-based methods in challenging scenes. You can check the python3 branch if you are using python3.
 
-Please note that this code is designed to work on MacOS
+Please note that this code is designed to work on MacOS.
+
+
 Running without docker
 This repo has the following dependencies:
 
@@ -18,7 +20,8 @@ cupy
 You can install the above dependencies manually, or use the following command:
 
 $ pip install numpy matplotlib scipy torch==1.4.0 opencv-python==4.2.0.32 cupy==6.7.0
-Our code has been tested on Ubuntu 18.04 and 16.04. An nvidia-driver and a Cuda version of 9.2/10.2 are required to run the code.
+
+
 
 Testing with a pretrained model
 Download the pretrained model
@@ -45,13 +48,17 @@ Note the poses outputed by TartanVO are in the NED frame.
 Alternative download links:
 In case using the above links is slow, please try the following links from Azure. You can replace the links with the following ones. Instead of wget, using the azcopy tool usually is much faster.
 
-Model: https://tartanair.blob.core.windows.net/tartanvo/models/tartanvo_1914.pkl
+Model:
+
+ https://tartanair.blob.core.windows.net/tartanvo/models/tartanvo_1914.pkl
 KITTI-10: https://tartanair.blob.core.windows.net/tartanvo/data/KITTI_10.zip
 EuRoC-V102: https://tartanair.blob.core.windows.net/tartanvo/data/EuRoC_V102.zip
 Try Baidu cloud or Google drive if neither the Box nor the Azure works.
 
 Baidu cloud: https://pan.baidu.com/s/1votDi0zbDXOKK4-4gtgczQ Code: vbtb
 Google drive: https://drive.google.com/drive/folders/1kzj2ZR4AxnDyR8elFhfnS2yX1wIxQaZO?usp=sharing
+
+
 Run the testing script
 The vo_trajectory_from_folder.py script shows an example of running TartanVO on a sequence of images out of a folder. Because TartanVO outputs up-to-scale translation, the script also reads a pose file for adjusting the translation scale. If the pose file is not provided, the default scale of 1.0 will be used. The results are stored in the results folder.
 
