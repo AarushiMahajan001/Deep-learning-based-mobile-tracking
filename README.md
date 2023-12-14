@@ -1,6 +1,10 @@
 # Deep-learning-based-mobile-tracking
 ECE 535 Project
+
+
 TartanVO is a learning-based visual odometry trained on TartanAir dataset. It generalizes to multiple datasets and real-world scenarios, and outperforms geometry-based methods in challenging scenes. You can check the python3 branch if you are using python3.
+
+Please note that this code is designed to work on MacOS
 Running without docker
 This repo has the following dependencies:
 
